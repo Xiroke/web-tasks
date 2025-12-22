@@ -125,6 +125,11 @@ section {
     flex-direction: column;
 }
 
+.search__input {
+    display: flex;
+    gap: 12px;
+}
+
 .competitions__cards {
     display: grid;
     grid-template-columns: repeat(3, minmax(200px, 400px));

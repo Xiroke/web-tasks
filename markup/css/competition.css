@@ -1,0 +1,22 @@
+.competition {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    gap: 12px;
+    flex-direction: column;
+    padding: 40px 20%;
+}
+
+.competition__image {
+    border-radius: 20px;
+}
+
+@media print {
+    .competition__stat {
+        display: none;
+    }
+
+    img {
+        filter: grayscale(100%);
+    }
+}

@@ -1,0 +1,18 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100dvh;
+    flex-direction: column;
+    background: url("../images/cosmos.png") center center / cover no-repeat;
+    backdrop-filter: brightness(30%);
+}
+
+img {
+    width: 80px;
+    height: 80px;
+}
+
+p {
+    font-size: 20px;
+}
