@@ -7,6 +7,25 @@
     <title>Регистрация</title>
 </head>
 <body>
+    <header>
+        <a href="./index.html">
+            <img class="logo" src="./images/logo.svg" alt="лого" class="logo">
+        </a>
+
+        <nav>
+            <a href="./registration.html">Регистрация</a>
+            <a href="./index.html#login">Авторизация</a>
+            <a href="./account.html">Личный кабинет</a>
+            <a href="./index.html#aboutus">О нас</a>
+            <a href="./index.html#competitions">Конкурсы</a>
+            <a href="#search">Поиск</a>
+            <a href="./index.html#contacts">Контакты</a>
+            <img class="burger" src="images/burger-light.svg" alt="Меню">
+            <a href="./index-light.html">
+                <img src="images/switch-theme.svg" alt="переключение темы" class="switch_theme">
+            </a>
+        </nav>
+    </header>
     <section class="registration">
         <form class="form-container">
             <div class="form">
@@ -57,7 +76,7 @@
                 <p>
                     <label><input type="checkbox" required> Я согласен с условиями обработки личных данных</label>
                 </p>
-                <button>Зарегистрироваться</button>
+                <button class="registrate-first-col">Зарегистрироваться</button>
             </div>
             <div class="form">
                 <h3 class="form__title">Члены семьи</h3>
@@ -80,8 +99,9 @@
                         <option>Женский</option>
                     </select>
                 </p>
-                <button type="button">Добавить ешё участника</button>
+                <button type="button" class="btn--second">Добавить ешё участника</button>
             </div>
+            <button class="registrate-end">Зарегистрироваться</button>
         </form>
     </section>
 </body>

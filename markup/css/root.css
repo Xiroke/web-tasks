@@ -1,12 +1,14 @@
 :root {
+    --white: #dcdcdc;
     --background: #131313;
-    --foreground: #dcdcdc;
+    --foreground: var(--white);
     --border: #505050;
     --layer-0: #1e1e1e;
     --layer-1: #252525;
     --layer-2: #393939;
     --actions: var(--layer-2);
     --primary: #2e6abc;
+    --primary-hover: rgba(46, 106, 188, 0.83);
 }
 
 body {
@@ -19,6 +21,8 @@ body {
 
 * {
     box-sizing: border-box;
+    scroll-behavior: smooth;
+    transition: .2s ease-in-out;
 }
 
 header {
@@ -31,6 +35,12 @@ header {
 }
 
 .switch_theme {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.burger {
     width: 28px;
     height: 28px;
     cursor: pointer;
@@ -48,6 +58,10 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    text-decoration: underline;
+}
+
 footer {
     padding: 40px 0 60px 0;
     width: 100%;
@@ -63,8 +77,16 @@ footer {
     gap: 12px;
 }
 
+h1 {
+    margin: 0 0 32px 0;
+}
+
 h2 {
     margin: 0 0 32px 0;
+}
+
+h3 {
+    margin: 0 0 18px 0;
 }
 
 h4 {
@@ -76,7 +98,7 @@ button, .btn {
     height: 36px;
     background-color: var(--primary);
     border: none;
-    color: var(--foreground);
+    color: var(--white);
     font-weight: bold;
     border-radius: 8px;
     cursor: pointer ;
@@ -85,7 +107,16 @@ button, .btn {
     justify-content: center;
 }
 
-input[type='text'], input[type='password'], input[type='email'], input[type='number'], select, .label-file{
+button:hover, .btn:hover {
+    background-color: var(--primary-hover);
+}
+
+.btn--second {
+    background-color: var(--layer-2) !important;
+    border: 1px solid var(--border);
+}
+
+input[type='text'], input[type='password'], input[type='email'], input[type='number'], select, .label-file, input[type='date'], input[type='time']{
     padding: 0 12px;
     height: 36px;
     background-color: var(--layer-1);
@@ -110,9 +141,45 @@ input[type='text'], input[type='password'], input[type='email'], input[type='num
     display: none;
 }
 
-input[type='text']:focus, input[type='password']:focus, input[type='email']:focus, input[type='number']:focus {
+input[type='text']:focus, input[type='password']:focus, input[type='email']:focus, input[type='number']:focus, select:focus, input[type='date']:focus, input[type='time']:focus {
     border-color: var(--primary);
 }
+
+input[type='time']::-webkit-calendar-picker-indicator, input[type='date']::-webkit-calendar-picker-indicator  {
+    filter: invert(1);
+    cursor: pointer;
+}
+
+input[type='checkbox'] {
+    margin: 0;
+    margin-right: 8px;
+    display: inline-block;
+    position: relative;
+    appearance: none;
+    height: 18px;
+    width: 18px;
+    background-color: var(--layer-1);
+    color: var(--foreground);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+}
+
+input[type='checkbox']:before {
+    position: absolute;
+    content: '';
+    left: 50%;
+    top: 50%;
+    transform: scale(0);
+    background-color: var(--foreground);
+    width: 50%;
+    height: 50%;
+    border-radius: 8px;
+}
+
+input[type='checkbox']:checked:before {
+    transform: scale(1) translate(-50%, -50%);
+}
+
 
 label {
     margin-bottom: 4px;
@@ -164,6 +231,7 @@ label {
 
 .card__image {
     border-radius: 12px;
+    height: 260px;
 }
 
 .card__stat {
@@ -180,4 +248,22 @@ label {
 .logo {
     width: 60px;
     height: 60px;
+}
+
+.burger {
+    display: none;
+}
+
+@media (max-width: 1024px) {
+    .burger {
+        display: block;
+    }
+
+    nav a{
+        display: none;
+    }
+
+    .switch_theme {
+        display: none;
+    }
 }

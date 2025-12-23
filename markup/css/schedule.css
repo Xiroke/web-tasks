@@ -1,0 +1,58 @@
+body {
+    padding: 60px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+table {
+    margin: 0 auto;
+}
+
+td {
+    width: 80px;
+    height: 80px;
+    border: 1px solid var(--layer-1);
+    text-align: center;
+    vertical-align: center;
+}
+
+tr {
+    position: relative;
+}
+
+tr.td-red > td:not(:empty) {
+    background-color: #d13225;
+}
+
+tr.td-green > td:not(:empty) {
+    background-color: #2bb127;
+}
+
+tr.td-blue > td:not(:empty) {
+    background-color: #2570d1;
+}
+
+tr.td-light-blue > td:not(:empty) {
+    background-color: #2fb2b8;
+}
+
+tr.td-purple > td:not(:empty) {
+    background-color: #c025d1;
+}
+
+tr > *:first-child {
+    width: 200px !important;
+    background-color: inherit !important;
+}
+
+td.empty {
+    background-color: var(--layer-2) !important;
+}
+
+.rocket-label {
+    left: 0;
+    top: 0;
+    position: absolute;
+    content: 'Запусти ракету';
+}

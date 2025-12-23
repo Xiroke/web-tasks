@@ -1,0 +1,10 @@
+:root {
+    --background: #dcdcdc;
+    --foreground: #131313;
+    --border: #c5c5c5;
+    --layer-0: #cfcfcf;
+    --layer-1: #c6c6c6;
+    --layer-2: #dcdcdc;
+    --actions: var(--layer-2);
+    --primary: #2e6abc;
+}

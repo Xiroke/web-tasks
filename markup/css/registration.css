@@ -10,3 +10,23 @@
     display: flex;
     gap: 24px;
 }
+
+.registrate-first-col {
+    display: block;
+}
+.registrate-end {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .form-container {
+        flex-direction: column;
+    }
+
+    .registrate-first-col {
+        display: none;
+    }
+    .registrate-end {
+        display: block;
+    }
+}

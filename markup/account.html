@@ -3,9 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./css/root.css">
-    <title>Title</title>
+    <link rel="stylesheet" href="./css/account.css">
+    <title>Профиль</title>
 </head>
 <body>
+    <header>
+        <a href="./index.html">
+            <img class="logo" src="./images/logo.svg" alt="лого" class="logo">
+        </a>
 
+        <nav>
+            <a href="./registration.html">Регистрация</a>
+            <a href="./index.html#login">Авторизация</a>
+            <a href="./account.html">Личный кабинет</a>
+            <a href="./index.html#aboutus">О нас</a>
+            <a href="./index.html#competitions">Конкурсы</a>
+            <a href="#search">Поиск</a>
+            <a href="./index.html#contacts">Контакты</a>
+            <img class="burger" src="images/burger-light.svg" alt="Меню">
+            <a href="./index-light.html">
+                <img src="images/switch-theme.svg" alt="переключение темы" class="switch_theme">
+            </a>
+        </nav>
+    </header>
+    <section class="account">
+        <h1>Профиль</h1>
+        <div class="profile">
+            <h3>Иванов Иван</h3>
+            <a href="./index.html" class="btn logout">Выйти</a>
+        </div>
+        <form class="form">
+            <h3 class="form__title">Записаться на конкурс</h3>
+            <p>
+                <label for="competition">Конкурс</label>
+                <select name="competition" id="competition">
+                    <option>Запуск ракеты</option>
+                    <option>Посетите музей космонавтики</option>
+                    <option>Попробуйте еду космонавтов</option>
+                    <option>Сыграйте в симулятор управления ракетой</option>
+                    <option>Семейные испытания</option>
+                </select>
+            </p>
+            <p>
+                <label for="date">Дата</label>
+                <input id="date" type="date" required>
+            </p>
+            <p>
+                <label for="time">Время</label>
+                <input id="time" type="time"required>
+            </p>
+            <p>
+                <label for="amount_person">Количеcтво человек</label>
+                <input id="amount_person" type="number" placeholder="0" required>
+            </p>
+            <button>Записаться</button>
+        </form>
+    </section>
 </body>
 </html>

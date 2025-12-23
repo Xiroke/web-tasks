@@ -8,17 +8,22 @@
 </head>
 <body>
     <header>
-        <img class="logo" src="./images/logo.svg" alt="лого" class="logo">
+        <a href="./index.html">
+            <img class="logo" src="./images/logo.svg" alt="лого" class="logo">
+        </a>
 
         <nav>
-            <a href="#">Регистрация</a>
-            <a href="#login">Авторизация</a>
-            <a href="#">Личный кабинет</a>
-            <a href="#aboutus">О нас</a>
-            <a href="#">Конкурсы</a>
+            <a href="./registration.html">Регистрация</a>
+            <a href="./index.html#login">Авторизация</a>
+            <a href="./account.html">Личный кабинет</a>
+            <a href="./index.html#aboutus">О нас</a>
+            <a href="./index.html#competitions">Конкурсы</a>
             <a href="#search">Поиск</a>
-            <a href="#contacts">Контакты</a>
-            <img src="images/switch-theme.svg" alt="переключение темы" class="switch_theme">
+            <a href="./index.html#contacts">Контакты</a>
+            <img class="burger" src="images/burger-light.svg" alt="Меню">
+            <a href="./index-light.html">
+                <img src="images/switch-theme.svg" alt="переключение темы" class="switch_theme">
+            </a>
         </nav>
     </header>
 
@@ -65,7 +70,7 @@
         <video src="./videos/hello.mp4" autoplay muted></video>
     </section>
 
-    <section class="aboutus">
+    <section class="aboutus" id="aboutus">
         <div class="aboutus__information">
             <h2>О нас</h2>
             <p>Мероприятие "Моя семья - мой космос" проходит уже несколько лет подряд в разных частях России. В этом году в качесте основого города выбран Челябинск. </p>
@@ -74,7 +79,7 @@
         <img src="./images/around_earth.jpg" alt="фото секции о нас" class="aboutus__image">
     </section>
 
-    <section class="login">
+    <section class="login" id="login">
         <form class="form">
             <h3 class="form__title">Авторизация</h3>
             <p>
@@ -92,7 +97,7 @@
         </form>
     </section>
 
-    <section class="search">
+    <section class="search" id="search">
         <h2>Поиск конкурсов</h2>
         <div class="search__input">
             <input id="search-query" type="text" placeholder="Запуск ракеты">
@@ -100,7 +105,7 @@
         </div>
     </section>
 
-    <section class="competitions">
+    <section class="competitions" id="competitions">
         <div class="competitions__cards">
             <div class="card">
                 <img class="card__image" src="./images/maket-raketi-vostok-11.jpg" alt="фото карточки конкурса">
@@ -263,7 +268,7 @@
     </section>
 
     <footer>
-        <div class="footer__col">
+        <div id="contacts" class="footer__col">
             <h4>Связаться с нами</h4>
             <a href="tel:74842234567">+7 (4842) 23-45-67</a>
             <a href="mailto:family@cosmos.ru">family@cosmos.ru</a>
@@ -271,12 +276,12 @@
 
         <div class="footer__col">
             <h4>Навигация</h4>
-            <a href="#">Главная</a>
-            <a href="#">Главная-светлая</a>
-            <a href="#">Регистрация</a>
-            <a href="#">Конкурс</a>
-            <a href="#">Личный кабинет</a>
-            <a href="#">Страница не найдена</a>
+            <a href=./index.html>Главная</a>
+            <a href="./index-light.html">Главная-светлая</a>
+            <a href="./registration.html">Регистрация</a>
+            <a href="./competition.html">Конкурс</a>
+            <a href="./account.html">Личный кабинет</a>
+            <a href="./404.html">Страница не найдена</a>
         </div>
     </footer>
 </body>

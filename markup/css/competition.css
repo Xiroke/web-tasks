@@ -9,6 +9,7 @@
 
 .competition__image {
     border-radius: 20px;
+    max-width: 90%;
 }
 
 @media print {
@@ -18,5 +19,15 @@
 
     img {
         filter: grayscale(100%);
+    }
+}
+
+h2 {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .competition {
+        padding: 40px 20px;
     }
 }
