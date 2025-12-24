@@ -9,7 +9,7 @@
 <body>
     <header>
         <a href="./index.html">
-            <img class="logo" src="./images/logo.svg" alt="лого" class="logo">
+            <img class="logo" src="./images/logo.svg" alt="лого">
         </a>
 
         <nav>
@@ -27,35 +27,25 @@
         </nav>
     </header>
     <section class="account">
-        <h1>Профиль</h1>
+        <h2>Профиль</h2>
         <div class="profile">
             <h3>Иванов Иван</h3>
             <a href="./index.html" class="btn logout">Выйти</a>
         </div>
         <form class="form">
             <h3 class="form__title">Записаться на конкурс</h3>
-            <p>
-                <label for="competition">Конкурс</label>
-                <select name="competition" id="competition">
-                    <option>Запуск ракеты</option>
-                    <option>Посетите музей космонавтики</option>
-                    <option>Попробуйте еду космонавтов</option>
-                    <option>Сыграйте в симулятор управления ракетой</option>
-                    <option>Семейные испытания</option>
-                </select>
-            </p>
-            <p>
-                <label for="date">Дата</label>
-                <input id="date" type="date" required>
-            </p>
-            <p>
-                <label for="time">Время</label>
-                <input id="time" type="time"required>
-            </p>
-            <p>
-                <label for="amount_person">Количеcтво человек</label>
-                <input id="amount_person" type="number" placeholder="0" required>
-            </p>
+            <select>
+                <option disabled selected hidden>Конкурс</option>
+                <option>Запуск ракеты</option>
+                <option>Посетите музей космонавтики</option>
+                <option>Попробуйте еду космонавтов</option>
+                <option>Сыграйте в симулятор управления ракетой</option>
+                <option>Семейные испытания</option>
+            </select>
+            <input type="date" required>
+            <input type="time" required>
+            <input type="number" placeholder="Количеcтво человек" required>
+
             <button>Записаться</button>
         </form>
     </section>

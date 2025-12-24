@@ -1,4 +1,4 @@
-body {
+.schedule {
     padding: 60px;
     display: flex;
     align-items: center;
@@ -12,7 +12,7 @@ table {
 td {
     width: 80px;
     height: 80px;
-    border: 1px solid var(--layer-1);
+    border: 3px solid var(--layer-1);
     text-align: center;
     vertical-align: center;
 }

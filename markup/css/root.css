@@ -6,6 +6,7 @@
     --layer-0: #1e1e1e;
     --layer-1: #252525;
     --layer-2: #393939;
+    --layer-3: #737373;
     --actions: var(--layer-2);
     --primary: #2e6abc;
     --primary-hover: rgba(46, 106, 188, 0.83);
@@ -17,6 +18,8 @@ body {
     width: 100%;
     color: var(--foreground);
     background-color: var(--background);
+    font-family: sans-serif;
+    font-size: 18px;
 }
 
 * {
@@ -77,11 +80,17 @@ footer {
     gap: 12px;
 }
 
+.footer__col a {
+    color: var(--layer-3);
+}
+
 h1 {
     margin: 0 0 32px 0;
+    font-size: 82px;
 }
 
 h2 {
+    font-size: 42px;
     margin: 0 0 32px 0;
 }
 
@@ -94,17 +103,19 @@ h4 {
 }
 
 button, .btn {
-    min-width: 160px;
-    height: 36px;
+    padding: 0 36px;
+    min-width: 140px;
+    height: 52px;
     background-color: var(--primary);
     border: none;
     color: var(--white);
     font-weight: bold;
-    border-radius: 8px;
+    border-radius: 999999px;
     cursor: pointer ;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 16px;
 }
 
 button:hover, .btn:hover {
@@ -118,15 +129,18 @@ button:hover, .btn:hover {
 
 input[type='text'], input[type='password'], input[type='email'], input[type='number'], select, .label-file, input[type='date'], input[type='time']{
     padding: 0 12px;
-    height: 36px;
+    height: 48px;
     background-color: var(--layer-1);
     color: var(--foreground);
-    border: 1px solid var(--border);
-    font-weight: bold;
+    border: 2px solid var(--border);
+    font-weight: 500;
     border-radius: 8px;
     outline: none;
-    min-width: 260px;
+    max-width: 400px;
+    width: 100%;
     transition: 300ms;
+    font-size: 16px;
+    box-sizing: border-box;
 }
 
 .label-file {
@@ -150,18 +164,26 @@ input[type='time']::-webkit-calendar-picker-indicator, input[type='date']::-webk
     cursor: pointer;
 }
 
+label:has(input[type='checkbox']) {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
 input[type='checkbox'] {
+    cursor: pointer;
     margin: 0;
     margin-right: 8px;
     display: inline-block;
     position: relative;
     appearance: none;
-    height: 18px;
-    width: 18px;
+    height: 24px;
+    width: 24px;
     background-color: var(--layer-1);
     color: var(--foreground);
     border: 1px solid var(--border);
     border-radius: 4px;
+    flex-shrink: 0;
 }
 
 input[type='checkbox']:before {
@@ -187,16 +209,10 @@ label {
 
 .form {
     display: flex;
-    align-items: stretch;
+    align-items: start;
     flex-direction: column;
-    width: 260px;
-}
-
-.form p {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    margin: 8px 0;
+    gap: 20px;
+    width: 80%;
 }
 
 .form__input-error {
@@ -229,9 +245,19 @@ label {
     margin-top: auto;
 }
 
+.card h3 {
+    height: 36px;
+}
+
+.card__description {
+    height: 80px;
+}
+
 .card__image {
     border-radius: 12px;
     height: 260px;
+    object-fit: cover;
+    object-position: center;
 }
 
 .card__stat {
